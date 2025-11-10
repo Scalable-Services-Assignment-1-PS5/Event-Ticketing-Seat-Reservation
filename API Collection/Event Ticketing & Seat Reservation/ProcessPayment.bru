@@ -1,0 +1,25 @@
+meta {
+  name: ProcessPayment
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://localhost:8085/api/v1/payments/charge
+  body: json
+  auth: inherit
+}
+
+headers {
+  Idempotency-Key: PAY-1762706678
+  Content-Type: application/json
+}
+
+body:json {
+  {"orderId":"ORD-d808030d-e2ef-4027-a922-6c3e9136794d","amount":15000.00}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

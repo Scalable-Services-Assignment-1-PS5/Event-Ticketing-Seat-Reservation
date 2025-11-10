@@ -1,0 +1,52 @@
+# Environment Variables Template for Remote MySQL
+# Copy this file to .env and fill in your remote MySQL credentials
+
+# JWT Secret (min 32 characters for HS256)
+JWT_SECRET=your-secret-key-at-least-32-characters-long-for-hs256-algorithm
+
+# Remote MySQL Database Configuration
+# User Service Database
+USER_DB_URL=jdbc:mysql://your-mysql-host:3306/user_service_db?createDatabaseIfNotExist=true
+USER_DB_USERNAME=your-username
+USER_DB_PASSWORD=your-password
+
+# Catalog Service Database
+CATALOG_DB_URL=jdbc:mysql://your-mysql-host:3306/catalog_service_db?createDatabaseIfNotExist=true
+CATALOG_DB_USERNAME=your-username
+CATALOG_DB_PASSWORD=your-password
+
+# Seating Service Database
+SEATING_DB_URL=jdbc:mysql://your-mysql-host:3306/seating_service_db?createDatabaseIfNotExist=true
+SEATING_DB_USERNAME=your-username
+SEATING_DB_PASSWORD=your-password
+
+# Order Service Database
+ORDER_DB_URL=jdbc:mysql://your-mysql-host:3306/order_service_db?createDatabaseIfNotExist=true
+ORDER_DB_USERNAME=your-username
+ORDER_DB_PASSWORD=your-password
+
+# Payment Service Database
+PAYMENT_DB_URL=jdbc:mysql://your-mysql-host:3306/payment_service_db?createDatabaseIfNotExist=true
+PAYMENT_DB_USERNAME=your-username
+PAYMENT_DB_PASSWORD=your-password
+
+# If using the same MySQL instance with different databases, you can use:
+# USER_DB_URL=jdbc:mysql://host:3306/user_service_db?createDatabaseIfNotExist=true
+# CATALOG_DB_URL=jdbc:mysql://host:3306/catalog_service_db?createDatabaseIfNotExist=true
+# SEATING_DB_URL=jdbc:mysql://host:3306/seating_service_db?createDatabaseIfNotExist=true
+# ORDER_DB_URL=jdbc:mysql://host:3306/order_service_db?createDatabaseIfNotExist=true
+# PAYMENT_DB_URL=jdbc:mysql://host:3306/payment_service_db?createDatabaseIfNotExist=true
+# All with the same username and password
+
+# Service URLs (for Order Service inter-service communication)
+# These are automatically set in docker compose.yml
+# CATALOG_SERVICE_URL=http://catalog-service:8082
+# SEATING_SERVICE_URL=http://seating-service:8083
+# PAYMENT_SERVICE_URL=http://payment-service:8085
+
+# Seed Data Import Configuration (for quick-import.sh and import_seed_data.py)
+DB_HOST=your-mysql-host
+DB_PORT=3306
+DB_USER=your-username
+DB_PASS=your-password
+

@@ -1,0 +1,15 @@
+meta {
+  name: GetOrder
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://localhost:8084/api/v1/orders/order/ORD-SEED-000001
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

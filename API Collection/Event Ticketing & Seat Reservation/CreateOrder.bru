@@ -1,0 +1,25 @@
+meta {
+  name: CreateOrder
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8084/api/v1/orders
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Idempotency-Key: TEST-176270678
+}
+
+body:json {
+  {"eventId":3,"seatIds":[548]}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

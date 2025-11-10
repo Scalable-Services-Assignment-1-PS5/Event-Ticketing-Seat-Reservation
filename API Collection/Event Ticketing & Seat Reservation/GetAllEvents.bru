@@ -1,0 +1,15 @@
+meta {
+  name: GetAllEvents
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8082/api/v1/events
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

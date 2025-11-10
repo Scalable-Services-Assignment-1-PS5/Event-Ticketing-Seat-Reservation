@@ -1,0 +1,25 @@
+meta {
+  name: ReserveSeat
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8083/api/v1/seats/reserve
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"orderId":"TEST-ORDER-167","seatIds":[474]}
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

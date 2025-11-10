@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Event Ticketing & Seat Reservation",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
