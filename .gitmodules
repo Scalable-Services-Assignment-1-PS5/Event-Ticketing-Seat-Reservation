@@ -1,3 +1,9 @@
 [submodule "services/payment-service"]
 	path = services/payment-service
 	url = https://github.com/Scalable-Services-Assignment-1-PS5/payment-service.git
+[submodule "services/Seating-service"]
+	path = services/Seating-service
+	url = https://github.com/Scalable-Services-Assignment-1-PS5/Seating-service.git
+[submodule "services/orders-service"]
+	path = services/orders-service
+	url = https://github.com/Scalable-Services-Assignment-1-PS5/orders-service.git
